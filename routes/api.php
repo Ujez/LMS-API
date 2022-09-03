@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\SclassController;
 use App\Http\Controllers\Api\SubjectController;
+use App\Http\Controllers\Api\SessionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,3 +34,10 @@ Route::post('/subject/store', [SubjectController::class, 'Store']);
 Route::get('/subject/edit/{id}', [SubjectController::class, 'Edit']);
 Route::put('/subject/update/{id}', [SubjectController::class, 'Update']);
 Route::get('/subject/delete/{id}', [SubjectController::class, 'Delete']);
+
+//SUBJECT ROUTES
+Route::get('/session', [SessionController::class, 'Index']);
+Route::post('/session/store', [SessionController::class, 'Store']);
+Route::get('/session/edit/{id}', [SessionController::class, 'Edit']);
+Route::put('/session/update/{id}', [SessionController::class, 'Update']);
+Route::get('/session/delete/{id}', [SessionController::class, 'Delete']);
